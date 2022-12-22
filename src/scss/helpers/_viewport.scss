@@ -1,0 +1,35 @@
+$tablet: 768px;
+$crosswise: 1024px;
+$laptop-small: 1280px;
+$laptop: 1440px;
+$desktop: 1920px;
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin crosswise {
+  @media screen and (min-width: $crosswise) {
+    @content;
+  }
+}
+
+@mixin laptop-small {
+  @media screen and (min-width: $laptop-small) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
