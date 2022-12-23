@@ -1,0 +1,13 @@
+.contentText {
+  font-size: 1rem;
+  font-weight: $font-weight_base;
+  letter-spacing: 0.5px;
+}
+
+.markText {
+  font-size: 14px;
+  line-height: $line-height_normal * 1.25;
+  font-weight: $font-weight_base;
+  letter-spacing: 0.25px;
+  color: $c_gray;
+}

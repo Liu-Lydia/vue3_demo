@@ -2,6 +2,8 @@
   <RouterView />
 </template>
 <script>
+import '@/assets/app.scss'
+
 export default {
   name: 'App',
 }
