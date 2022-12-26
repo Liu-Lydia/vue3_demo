@@ -1,43 +1,82 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
 
-$font: "Noto Sans TC", Arial, sans-serif;
+$font: 'Noto Sans TC', Arial, sans-serif;
 
 // text color
-$main_color: #3FB195;
-$c_scenic: #3FB195;
-$c_restaurant: #FF9999;
-$c_accommodation: #C499FF;
-$c_active: #64C5E3;
+$main_color: #3fb195;
+$c_scenic: #3fb195;
+$c_restaurant: #ff9999;
+$c_accommodation: #c499ff;
+$c_active: #64c5e3;
 $c_dark: #222222;
 $c_gray: #666666;
-$c_white: #FFFFFF;
-$c_light: #FAFAFA;
+$c_white: #ffffff;
+$c_light: #fafafa;
 
 //  text size/weight
-$font-size_base: 1rem !default;
+$font-size_base: 1rem !default; // 16px
 $font-weight_normal: 400 !default;
-$line-height_normal: 1rem !default;
+$line-height_normal: 1rem !default; // 16px
 
-$h1-font_size: $font-size-base * 3.625 !default;
-$h2-font_size: $font-size-base * 2 !default;
-$h3-font_size: $font-size-base * 1.5 !default;
-$h6-font_size: $font-size-base * 1.125!default;
+$h1-font_size: $font-size_base * 3.625 !default; // 58px
+$h2-font_size: $font-size_base * 2 !default; // 32px
+$h3-font_size: $font-size_base * 1.5 !default; // 24px
+$h6-font_size: $font-size_base * 1.125 !default; // 18px
 
-$font-weight_base: $font-weight_normal !default;
+$font-weight_base: $font-weight_normal !default; // 400
 $font-weight_bold: 700 !default;
-$line-height_base: $line-height_normal * 1.5 !default;
+$line-height_base: $line-height_normal * 1.5 !default; // 24px
 
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-family: $font;
   line-height: $line-height_base;
   color: $c_dark;
 }
 
-h1 { font-size: $h1-font_size; line-height: $line-height_base * 3; letter-spacing: -0.5px;}
-h2 { font-size: $h2-font_size; line-height: $line-height_base * 1.5; letter-spacing: 0.25px;}
-h3 { font-size: $h3-font_size; line-height: $line-height_base * 1.5; letter-spacing: 0.25px;}
-h6 { font-size: $h6-font_size; line-height: $line-height_base; letter-spacing: 0.15px;}
+h1 {
+  font-size: $h2-font_size;
+  line-height: $line-height_base * 1.5;
+  letter-spacing: 0.25px;
+}
+h2 {
+  font-size: $h2-font_size;
+  line-height: $line-height_base * 1.5;
+  letter-spacing: 0.25px;
+}
+h3 {
+  font-size: $h3-font_size;
+  line-height: $line-height_base * 1.5;
+  letter-spacing: 0.25px;
+}
+h6 {
+  font-size: $h6-font_size;
+  line-height: $line-height_base;
+  letter-spacing: 0.15px;
+}
+p {
+  font-size: 16px;
+  line-height: $line-height_base * 1.5;
+  letter-spacing: 0.5px;
+}
 
-
+// >768
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: $h1-font_size;
+    line-height: $line-height_base * 3;
+    letter-spacing: -0.5px;
+  }
+  p {
+    font-size: $h6-font_size;
+    font-weight: $font-weight_base;
+    line-height: $line-height_base * 1.7;
+    letter-spacing: 0.15px;
+  }
+}
 

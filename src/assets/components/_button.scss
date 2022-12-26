@@ -1,0 +1,34 @@
+
+@mixin button($c_dark, $main_color, $c_white) {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  height: 44px;
+  color: $c_dark;
+  background: $c_white;
+  border: 1px solid $main_color;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    color: $c_white;
+    background: $main_color;
+  }
+
+  &:active:not(:disabled) {
+    color: $c_white;
+    background: $main_color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.hollowButton {
+  @include button($c_dark, $main_color, $c_white);
+}
+.solidButton {
+
+}
+
