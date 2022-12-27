@@ -1,23 +1,24 @@
 
-@mixin button($c_dark, $main_color, $c_white) {
+@mixin button($color, $color-hover, $color-active, $bg, $bg-hover, $bg-active) {
   display: inline-flex;
   align-items: center;
   padding: 8px 12px;
   height: 44px;
-  color: $c_dark;
-  background: $c_white;
+  color: $color;
+  background: $bg;
   border: 1px solid $main_color;
   border-radius: 8px;
+  transition: all .4s cubic-bezier(.165,.84,.44,1);
   cursor: pointer;
 
   &:hover:not(:disabled) {
-    color: $c_white;
-    background: $main_color;
+    color: $color-hover;
+    background: $bg-hover;
   }
 
   &:active:not(:disabled) {
-    color: $c_white;
-    background: $main_color;
+    color: $color-active;
+    background: $bg-active;
   }
 
   &:disabled {
@@ -26,9 +27,9 @@
 }
 
 .hollowButton {
-  @include button($c_dark, $main_color, $c_white);
+  @include button($c_dark ,$c_white ,$c_white ,$c_white ,$main_color ,$main_color);
 }
 .solidButton {
-
+  @include button($c_white ,$c_dark ,$c_dark ,$main_color ,$c_white ,$c_white);
 }
 
